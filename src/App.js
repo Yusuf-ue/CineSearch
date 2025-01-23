@@ -4,7 +4,7 @@ import SearchIcon from './search.svg';
 import MovieCard from "./MovieCard";
 //f06136a6
 
-const API_URL = 'https://www.omdbapi.com/?apikey=' //need own apikey from https://www.omdbapi.com/apikey.aspx?
+const API_URL = 'https://www.omdbapi.com/?apikey=' // need own apikey from https://www.omdbapi.com/apikey.aspx?
 {/*Example api call:
    const movie1 = {
   "Title": "Spiderman and Grandma",
