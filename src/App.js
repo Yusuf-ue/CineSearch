@@ -47,9 +47,9 @@ function App() {
         />  
         
         <img 
-          src={SearchIcon}
-          alt="search"
-          onClick={() => searchMovies(searchTerm)}
+          src= {SearchIcon}
+          alt= "search"
+          onClick= {() => searchMovies(searchTerm)}
         />
       </div>
 
