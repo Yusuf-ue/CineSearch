@@ -43,7 +43,7 @@ function App() {
         {/* Navigation links */}
         <nav>
           <Link to="/CineSearch" className="nav-link">Home</Link>
-          <Link to="/about" className="nav-link">About Me</Link>
+          <Link to="/CineSearch/about" className="nav-link">About Me</Link>
         </nav>
         
 
@@ -104,7 +104,7 @@ function App() {
           />
           
           {/* About Me Route */}
-          <Route path="/about" element={<AboutMe />} />
+          <Route path="/CineSearch/about" element={<AboutMe />} />
         </Routes>
       </div>
     </Router>
