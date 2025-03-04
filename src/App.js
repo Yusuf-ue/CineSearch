@@ -42,9 +42,10 @@ function App() {
     <Router>
         {/* Navigation links */}
         <nav>
-          <Link to="/" className="nav-link">Home</Link>
+          <Link to="/CineSearch" className="nav-link">Home</Link>
           <Link to="/about" className="nav-link">About Me</Link>
         </nav>
+        
 
       <div className="app">
         <h1 onClick={() => searchMovies("Hello World")} style={{ cursor: "pointer" }}>
@@ -55,7 +56,7 @@ function App() {
         <Routes>
           {/* Home Page Route */}
           <Route
-            path="/"
+            path="/CineSearch"
             element={
               <>
                 {/* Search Bar */}
