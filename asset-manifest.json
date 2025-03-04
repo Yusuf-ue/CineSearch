@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/CineSearch/static/css/main.c66e8862.css",
+    "main.js": "/CineSearch/static/js/main.e24eaa4d.js",
+    "index.html": "/CineSearch/index.html",
+    "static/media/search.svg": "/CineSearch/static/media/search.8ff5426bc87a3f731164f42e41b7144b.svg",
+    "main.c66e8862.css.map": "/CineSearch/static/css/main.c66e8862.css.map",
+    "main.e24eaa4d.js.map": "/CineSearch/static/js/main.e24eaa4d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c66e8862.css",
+    "static/js/main.e24eaa4d.js"
+  ]
+}
