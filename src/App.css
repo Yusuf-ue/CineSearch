@@ -58,6 +58,8 @@ h1 {
   font-family: var(--font-raleway);
   font-weight: 500;
   padding-right: 1rem;
+  outline: none;
+  box-shadow: none;
 
   color: #FF7F50;
   background: #1f2123;
@@ -134,7 +136,7 @@ h1 {
 
 .movie:hover div:nth-of-type(2) {
   height: 100%;
-  opacity: 0.3;
+  opacity: 0.8;
 }
 
 .movie:hover div:nth-of-type(1) {
@@ -178,4 +180,177 @@ h1 {
     width: "100%";
     margin: 1rem;
   }
+}
+/* Modal background */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Keep the dark background for the entire page */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Modal content (Plot window) */
+.modal-content {
+  background: #FF7F50;  /* Orange background for the plot window */
+  padding: 30px;
+  border-radius: 15px;
+  width: 500px;
+  max-width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(50px);
+  animation: slideUp 0.3s forwards;
+
+  /* Fixed height with overflow scroll */
+  max-height: 80vh; /* 80% of the viewport height */
+  overflow-y: auto; /* Enables vertical scrolling */
+
+  /* Adding padding and background clip */
+  background-clip: padding-box; /* Ensures the background doesn't overflow the border-radius */
+}
+
+/* Smooth slide-up animation */
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Movie poster in modal */
+.modal-poster {
+  max-width: 100%;
+  height: auto;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+/* Close button */
+.close {
+  position: absolute; /* Keeps it fixed inside the modal */
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Year styling in the top-left of the modal */
+.modal-year {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  text-shadow: 0 0 10px rgba(184, 184, 184, 0.8); /* Glowing grey effect for the year */
+}
+
+/* Title of the movie */
+.modal-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #000;  /* Black text for the title */
+  margin-bottom: 15px;
+  margin-top: 30px;  /* Added space between title and upper border */
+  text-transform: capitalize;
+}
+
+/* Plot text inside the modal */
+.modal-plot {
+  font-size: 16px;
+  font-weight: 300;
+  color: #000;  /* Black text for the plot */
+  line-height: 1.6;
+  margin-bottom: 20px;
+  white-space: pre-wrap; /* Handles wrapped lines for better readability */
+}
+
+/* Transition for background and modal content */
+.modal-content,
+.modal {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Custom Scrollbar */
+.modal-content::-webkit-scrollbar {
+  width: 8px;  /* Width of the scrollbar */
+  border-radius: 10px; /* Ensures the scrollbar is rounded */
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background-color: #B8B8B8; /* Light grey for the scrollbar thumb */
+  border-radius: 10px; /* Rounded edges for the scrollbar thumb */
+  box-shadow: 0 0 10px rgba(184, 184, 184, 0.8); /* Glowing effect */
+}
+.modal-content::-webkit-scrollbar-track {
+  background-color: transparent; /* Transparent background for the scrollbar track */
+}
+
+/* Hide the up and down arrows */
+.modal-content::-webkit-scrollbar-button {
+  display: none;
+}
+
+.app {
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 60px; /* This will add space for the fixed nav */
+}
+
+/* Navigation styles */
+nav {
+  position: fixed; /* Fix the nav to the top of the window */
+  top: 0;
+  right: 0; /* Position it at the top-right corner */
+  padding: 1rem; /* Add some padding for spacing */
+  z-index: 1000; /* Ensure the nav is above other content */
+  background-color: rgba(31, 33, 35, 0.9); /* Semi-transparent background */
+  border-bottom-left-radius: 10px; /* Rounded corner for aesthetics */
+  display: flex; /* Ensure links are displayed in a row */
+}
+
+.nav-link {
+  color: #FF7F50; /* Orange color for links */
+  text-decoration: none; /* Remove underline */
+  font-family: var(--font-raleway);
+  font-weight: 500;
+  margin-left: 1rem; /* Space between links */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.nav-link:hover {
+  color: #f9d3b4; /* Lighter color on hover */
+}
+
+/* Force the scrollbar to always be visible */
+html {
+  overflow-y: scroll;
 }
