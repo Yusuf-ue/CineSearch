@@ -1,5 +1,4 @@
-add your own api key in the App.js at
-'https://www.omdbapi.com/?apikey=______'
+Site deployed at https://yusuf-ue.github.io/CineSearch/
 
 # Getting Started with Create React App
 
